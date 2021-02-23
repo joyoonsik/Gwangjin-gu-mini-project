@@ -32,16 +32,11 @@ def register():   #get 요청 단순히 페이지 표시 post요청 회원가입
 
 @app.route('/login', methods=['GET','POST'])  
 def login():
-    global userLoginCheck
-    userLoginCheck = False
-    print('안녕'+str(userLoginCheck))
     form = LoginForm() #로그인 폼 생성
     if form.validate_on_submit(): #유효성 검사
         session['userid'] = form.data.get('userid') #form에서 가져온 userid를 session에 저장
         if 'userid' in session:
             print(session)
-            userLoginCheck = True
-            print('안녕2'+str(userLoginCheck))
             return redirect('/navbar') #로그인에 성공하면 홈화면으로 redirect
         else:
             print('틀렸음')
