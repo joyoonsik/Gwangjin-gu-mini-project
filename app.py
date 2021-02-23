@@ -52,7 +52,7 @@ def logout():
     return redirect('/navbar')
 
 
-@app.route('/main')
+@app.route('/')
 def main():
     userid = session.get('userid', None)
     return render_template('main.html',userid=userid)    # 이번 포스팅에는 필요없음(지난포스팅꺼)
