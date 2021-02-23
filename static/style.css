@@ -1,0 +1,12 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    /* width: 100% */
+    left: 0;
+    right: 0;
+}
+
+body {
+    padding-top: 75px;
+    /* 생략 */
+}
