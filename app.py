@@ -51,6 +51,9 @@ def logout():
     session.pop('userid',None)
     return redirect('/navbar')
 
+@app.route('/notify',methods=['GET'])
+def notify():
+    return render_template('notify.html')
 
 @app.route('/')
 def main():
@@ -85,3 +88,4 @@ if __name__ == "__main__":
     
     app.run(host='127.0.0.1', port=5000, debug=True) 
 #포트번호는 기본 5000, 개발단계에서는 debug는 True
+
